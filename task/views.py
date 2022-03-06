@@ -24,7 +24,7 @@ def home(request):
         form = TaskModelForm(request.POST)
         if form.is_valid():
             form.save()
-            # return HttpResponse("Task is created")
+            return redirect('list_task')
     context = {'form': form}
     return render(request, "task/home.html", context)
 

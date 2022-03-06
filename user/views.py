@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
@@ -35,3 +35,6 @@ def user_login(request):
     return render(request, "user/user_login.html", context)
 
 
+def user_logout(request):
+    logout(request)
+    return redirect("user_login")
