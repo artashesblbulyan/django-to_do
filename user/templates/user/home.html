@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'task/base.html' %}
+ {% block content %}
+
 <h2>SING UP</h2>
 <form method="post">{% csrf_token %}
     {{form}}
     <br>
     <button type="submit">SAVE</button>
 </form>
-
-</body>
-</html>
+ {% endblock %}
